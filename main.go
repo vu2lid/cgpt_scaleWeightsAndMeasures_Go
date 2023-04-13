@@ -45,7 +45,7 @@ func main() {
 		}
 
 		// Send the response back to the client
-		fmt.Fprintf(w, "Converted quantity : %f %s = %s %s", quantity, fromUnit, convertedValue, toUnit)
+		fmt.Fprintf(w, "Converted quantity : %s", convertedValue)
 	})
 
 	http.ListenAndServe(":"+serverPort, nil)

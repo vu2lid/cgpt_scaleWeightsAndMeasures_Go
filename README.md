@@ -28,25 +28,25 @@ from commandline.
 It will comeup with an answer like:
 
 ```
-Converted quantity : 1.000000 kilogram = {
+Converted quantity : {
     "choices": [
         {
             "finish_reason": "stop",
             "index": 0,
             "logprobs": null,
-            "text": "\nAnswer: 2.00 kilograms is equal to 4.40925 pounds."
+            "text": "\n2.00 kg = 4.40924524 pounds"
         }
     ],
-    "created": 1681357332,
-    "id": "cmpl-74i8aulD6q8nxmher2GllqNW1dzxBU",
+    "created": 1681361203,
+    "id": "cmpl-74j91ZpnR6mkgquW7jOeIOng8sEHE",
     "model": "text-davinci-003",
     "object": "text_completion",
     "usage": {
-        "completion_tokens": 16,
+        "completion_tokens": 12,
         "prompt_tokens": 209,
-        "total_tokens": 225
+        "total_tokens": 221
     }
-} pound
+}
 ```
 
 Experiment with training data and question !
