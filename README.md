@@ -11,7 +11,7 @@ You will need Go (please see the references).
 
 Get OpenAI API key (check References towards the end). Copy `.env.example` to `.env` and add the API key there.
 
-After installing `Go` , it should be possible to run each demo program with something like `go run main.go`. This will start a local REST service on port 3000.
+After installing `Go` , it should be possible to run the demo with something like `go run main.go`. This will start a local REST service on port 3000.
 
 To try the backend REST service - it should be possible to test some weights and measures scaling REST endpoint with something like:
 
