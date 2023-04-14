@@ -3,7 +3,7 @@ package weightsandmeasures
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -59,7 +59,7 @@ func ConvertQuantity(scaleFactor float64, quantity float64, fromUnit string, toU
 		return "", err
 	}
 	defer resp.Body.Close()
-	respBody, err := ioutil.ReadAll(resp.Body)
+	respBody, err := io.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println("Error reading HTTP response:", err)
 		return "", err
