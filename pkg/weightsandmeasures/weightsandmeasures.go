@@ -1,3 +1,5 @@
+// Reads OpenAI API configration from .env creates the prompt based on input
+// sends the request to OpenAI API endpoint and returns the result.
 package weightsandmeasures
 
 import (
