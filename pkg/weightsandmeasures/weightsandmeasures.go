@@ -17,7 +17,7 @@ import (
 // and returns the converted quantity and an error (if any).
 func ConvertQuantity(scaleFactor float64, quantity float64, fromUnit string, toUnit string) (string, error) {
 	// Get OpenAI API call configuration parameters
-	apiKey, model, temperature, max_tokens, n, shouldReturn, returnValue, returnValue1 := newFunction()
+	apiKey, model, temperature, max_tokens, n, shouldReturn, returnValue, returnValue1 := readConfiguration()
 	if shouldReturn {
 		return returnValue, returnValue1
 	}
@@ -83,7 +83,7 @@ func ConvertQuantity(scaleFactor float64, quantity float64, fromUnit string, toU
 	return string(prettyJson), err
 }
 
-func newFunction() (string, string, float64, int, int, bool, string, error) {
+func readConfiguration() (string, string, float64, int, int, bool, string, error) {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
